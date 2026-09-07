@@ -196,7 +196,12 @@ dialog form { margin-top:24px; text-align:right; }
   .hours { padding:56px 0; }
   .hours-bottom { padding:48px 0; }
   .hours h2 { margin-bottom:20px; }
-  .table-background { margin-inline:-20px; padding-inline:20px; }
+  .table-background {
+    margin-inline:-20px;
+    padding-inline:20px;
+    contain:paint; /* Keep the wide table inside its own horizontal scroller on mobile Safari. */
+    -webkit-overflow-scrolling:touch;
+  }
   table { min-width:720px; margin:0; }
   .hours-notes { font-size:14px; line-height:1.6; }
 
