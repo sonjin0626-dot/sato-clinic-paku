@@ -115,12 +115,6 @@ td { color:var(--primary); }
 .departments .container > p { margin-top:48px; }
 .site-footer { height:100px; padding:40px 0; background:var(--text); color:white; text-align:center; }
 .site-footer small { display:block; font-size:14px; line-height:22px; }
-.notice-information { display:none; padding:40px max(40px,calc((100% - 1200px) / 2)); background:var(--mint); }
-.notice-information:target { display:block; }
-.notice-information h2,dialog h2 { margin-bottom:24px; }
-dialog { max-width:600px; padding:40px; border:1px solid var(--border); border-radius:8px; color:var(--text); background:var(--paper); }
-dialog::backdrop { background:#26323899; }
-dialog form { margin-top:24px; text-align:right; }
 
 /* Tablet: navigation collapses and two-column layouts become fluid. */
 @media (max-width:1100px) {
@@ -276,3 +270,267 @@ dialog form { margin-top:24px; text-align:right; }
   html,.gallery-viewport { scroll-behavior:auto; }
   .nav-toggle span { transition:none; }
 }
+
+/* Mobile refinement v2: Hours + mobile content hierarchy */
+@media (max-width: 767px) {
+  /* ---------------------------------------------------------
+     Hours
+     - no horizontal scrolling
+     - slightly narrower time column than the 390px mockup
+     - both top and bottom Hours share the same behavior
+     --------------------------------------------------------- */
+  .hours {
+    padding: 40px 0;
+    overflow-x: clip;
+  }
+
+  .hours > .container {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  .hours .table-background {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .hours table {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    table-layout: fixed;
+  }
+
+  /* 88px in the original 390px Figma was visually generous.
+     80px keeps the 3-line time label readable while giving weekdays more room. */
+  .hours .time-column,
+  .hours thead th:first-child,
+  .hours tbody th {
+    width: 80px;
+  }
+
+  .hours th,
+  .hours td {
+    min-width: 0;
+  }
+
+  .hours thead th:first-child {
+    padding-inline: 4px;
+  }
+
+  .hours thead th:not(:first-child),
+  .hours tbody td {
+    padding-inline: 2px;
+  }
+
+  .hours tbody th {
+    height: auto;
+    padding: 5px 4px;
+  }
+
+  .hours-period {
+    width: 58px;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .hours-notes {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 16px;
+    padding-inline: 10px;
+    overflow-wrap: anywhere;
+  }
+
+  .hours-notes p {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  /* ---------------------------------------------------------
+     News
+     Mobile priority is the announcement content itself.
+     The desktop image remains; on smartphone it is omitted.
+     --------------------------------------------------------- */
+  .news-layout {
+    display: block;
+  }
+
+  .news-layout > img {
+    display: none;
+  }
+
+  .news-content {
+    width: 100%;
+  }
+
+  .news h2 {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  /* ---------------------------------------------------------
+     Greeting
+     Visual order: heading -> portrait -> copy
+     --------------------------------------------------------- */
+  .greeting-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .greeting-content {
+    display: contents;
+  }
+
+  .greeting-content h2 {
+    order: 1;
+    margin: 0;
+    text-align: center;
+  }
+
+  .director {
+    order: 2;
+    width: min(100%, 386px);
+    margin-inline: auto;
+  }
+
+  .greeting-text {
+    order: 3;
+  }
+
+  /* ---------------------------------------------------------
+     Services / Staff
+     Visual order inside each item: heading -> photo -> detail
+     --------------------------------------------------------- */
+  .services .alternating-row,
+  .staff .alternating-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .services .alternating-row .row-content,
+  .staff .alternating-row .row-content {
+    display: contents;
+  }
+
+  .services .alternating-row h3,
+  .staff .alternating-row h3 {
+    order: 1;
+    margin: 0;
+    text-align: left;
+  }
+
+  .services .alternating-row > img,
+  .staff .alternating-row > img {
+    order: 2;
+    grid-column: auto;
+    grid-row: auto;
+    width: min(100%, 360px);
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .services .alternating-row p,
+  .staff .staff-details {
+    order: 3;
+  }
+
+  /* ---------------------------------------------------------
+     About
+     Visual order: heading -> photo -> copy -> button
+     --------------------------------------------------------- */
+  .about-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-content,
+  .about-content > div:first-child {
+    display: contents;
+  }
+
+  .about-content h2 {
+    order: 1;
+    margin: 0;
+    text-align: center;
+  }
+
+  .about-layout > img {
+    order: 2;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .about-content p {
+    order: 3;
+  }
+
+  .about-content .button-row {
+    order: 4;
+  }
+}
+
+@media (max-width: 380px) {
+  .hours .time-column,
+  .hours thead th:first-child,
+  .hours tbody th {
+    width: 72px;
+  }
+
+  .hours thead th:first-child {
+    font-size: 13px;
+  }
+}
+
+/* === HOURS + SKIP-LINK FINAL REFINE v3 START === */
+.hours { overflow-x: clip; }
+.hours .table-background { width:100%; max-width:100%; overflow-x:visible; background:transparent; }
+.hours table { width:964px; max-width:100%; min-width:0; margin-inline:auto; background:var(--paper); }
+.hours tbody tr { border-bottom:1px solid var(--border); }
+.hours tr > :first-child { border-right:1px solid var(--border); }
+
+.skip-link:focus {
+  position:fixed;
+  inset:8px auto auto 8px;
+  z-index:1000;
+  padding:6px 10px;
+  border:1px solid var(--border);
+  border-radius:4px;
+  background:#fff;
+  color:var(--primary);
+  font-size:13px;
+  line-height:20px;
+}
+.skip-link:focus-visible { outline:2px solid var(--primary); outline-offset:2px; }
+
+@media (max-width:767px) {
+  .hours > .container { width:100%; max-width:none; }
+  .hours .table-background,
+  .hours table { width:100%; max-width:100%; min-width:0; }
+  .hours .time-column { width:80px; }
+  .hours th,
+  .hours td { min-width:0; padding-inline:3px; }
+  .hours thead th { font-size:14px; line-height:20px; }
+  .hours tbody th,
+  .hours tbody td { font-size:16px; line-height:24px; }
+  .hours .hours-notes { width:calc(100% - 20px); max-width:964px; margin-inline:auto; }
+}
+
+@media (max-width:380px) {
+  .hours .time-column { width:72px; }
+  .hours th,
+  .hours td { padding-inline:2px; }
+  .hours tbody th,
+  .hours tbody td { font-size:15px; }
+}
+/* === HOURS + SKIP-LINK FINAL REFINE v3 END === */

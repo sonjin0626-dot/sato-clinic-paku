@@ -113,13 +113,3 @@ if (siteHeader && navToggle && globalNav) {
   }
 }
 
-const dialog = document.querySelector("#notice-dialog");
-document.querySelectorAll("[data-notice]").forEach(link => {
-  link.addEventListener("click", event => {
-    if (!dialog || typeof dialog.showModal !== "function") return;
-    event.preventDefault();
-    const dialogTitle = document.querySelector("#dialog-title");
-    if (dialogTitle) dialogTitle.textContent = link.dataset.notice;
-    dialog.showModal();
-  });
-});
