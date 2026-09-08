@@ -466,3 +466,34 @@ body.news-page {
     transition: none;
   }
 }
+
+/* === NEWS SUBPAGE MOBILE + HEADER v1 START === */
+/*
+  news.css is loaded after style.css, so repeat only the background override
+  with the existing News-page specificity.
+*/
+.news-page .subpage-header.site-header {
+  background: linear-gradient(
+    90deg,
+    #bcd9dd 0%,
+    #3b529a 30.7%,
+    #3752a0 30.8%,
+    #315999 86%
+  );
+}
+
+@media (max-width: 767px) {
+  /*
+    On the News archive page, prioritize the list itself on smartphones.
+    Desktop/tablet keep the supplied photo.
+  */
+  .news-archive__image {
+    display: none;
+  }
+
+  .news-archive__layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}
+/* === NEWS SUBPAGE MOBILE + HEADER v1 END === */
