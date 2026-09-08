@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="佐藤医院からのお知らせ一覧です。">
+  <title>お知らせ | 佐藤医院</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/news.css">
+  <script src="../js/news.js" defer></script>
+</head>
+<body class="news-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header subpage-header">
+    <a class="logo" href="../index.html#top" aria-label="佐藤医院 トップ"><img src="../assets/img/logo.png" alt="佐藤医院" width="428" height="143"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav id="global-nav" aria-label="メインナビゲーション"><a href="../index.html#top">トップ</a><a href="./index.html" aria-current="page">お知らせ</a><a href="../index.html#services">診療内容</a><a href="../index.html#about">当院について</a><a href="../index.html#staff">スタッフ紹介</a><a href="../index.html#access">所在地</a></nav>
+  </header>
+  <main id="main" class="news-page-main">
+    <div class="container">
+      <nav class="news-breadcrumb" aria-label="パンくず"><ol><li><a href="../index.html#top">トップ</a></li><li aria-current="page">お知らせ</li></ol></nav>
+      <section class="news-archive" aria-labelledby="news-archive-title">
+        <div class="news-archive__heading"><p class="news-archive__eyebrow">NEWS</p><h1 class="news-archive__title" id="news-archive-title">お知らせ</h1></div>
+        <div class="news-archive__layout">
+          <img class="news-archive__image" src="../assets/img/news.png" alt="院内で患者様を案内するスタッフ" width="360" height="480">
+          <ul class="news-archive__list">
+            <li><a href="./influenza.html">インフルエンザ予防接種について</a></li>
+            <li><a href="./year-end.html">年末年始の休診について</a></li>
+            <li><a href="./checkup.html">健康診断のご案内</a></li>
+            <li><a href="./covid19.html">新型コロナウイルス対策について</a></li>
+            <li><a href="./online.html">オンライン診療の導入について</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><small>©佐藤医院</small></div></footer>
+</body>
+</html>
