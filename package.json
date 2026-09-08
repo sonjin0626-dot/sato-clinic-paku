@@ -1,0 +1,27 @@
+{
+  "name": "sato-clinic",
+  "version": "1.0.0",
+  "description": "EDIX フロント開発実習で制作する佐藤医院Webサイトです。",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonjin0626-dot/sato-clinic-paku.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sonjin0626-dot/sato-clinic-paku/issues"
+  },
+  "homepage": "https://github.com/sonjin0626-dot/sato-clinic-paku#readme",
+  "devDependencies": {
+    "sharp": "^0.35.4"
+  }
+}
