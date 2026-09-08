@@ -30,7 +30,7 @@
     </section>
     <section class="news" id="news" aria-labelledby="news-title"><div class="container news-layout">
       <img src="./assets/img/news.png" alt="院内で患者様を案内するスタッフ" width="360" height="480" >
-      <div class="news-content"><h2 id="news-title">お知らせ</h2><ul class="news-list"><li><a href="./news/influenza.html">インフルエンザ予防接種について</a></li><li><a href="./news/year-end.html">年末年始の休診について</a></li><li><a href="./news/checkup.html">健康診断のご案内</a></li><li><a href="./news/covid19.html">新型コロナウイルス対策について</a></li><li><a href="./news/online.html">オンライン診療の導入について</a></li></ul><div class="button-row"><a class="button" href="./news/index.html">過去のお知らせ</a></div></div>
+      <div class="news-content"><h2 id="news-title">お知らせ</h2><ul class="news-list"><li><a href="#news-information" data-notice="インフルエンザ予防接種について">インフルエンザ予防接種について</a></li><li><a href="#news-information" data-notice="年末年始の休診について">年末年始の休診について</a></li><li><a href="#news-information" data-notice="健康診断のご案内">健康診断のご案内</a></li><li><a href="#news-information" data-notice="新型コロナウイルス対策について">新型コロナウイルス対策について</a></li><li><a href="#news-information" data-notice="オンライン診療の導入について">オンライン診療の導入について</a></li></ul><div class="button-row"><a class="button" href="#news-information" data-notice="過去のお知らせ">過去のお知らせ</a></div></div>
     </div></section>
     <section class="greeting" id="greeting" aria-labelledby="greeting-title"><div class="container greeting-layout">
       <figure class="director"><img src="./assets/img/director.png" alt="院長 佐藤太郎" width="440" height="440" ><figcaption>TARO SATO</figcaption></figure>
