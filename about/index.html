@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../css/subpage.css">
   <script src="../js/news.js" defer></script>
 </head>
-<body class="subpage about-page">
+<body class="subpage about-page v2-subpage">
   <a class="skip-link" href="#main">本文へ</a>
 
   <header class="site-header subpage-header">
@@ -52,6 +52,20 @@
         <div class="about-detail__content">
           <img src="../assets/img/about.webp" alt="自然光が差し込む院内の待合室" width="480" height="360" loading="lazy" decoding="async">
           <p>佐藤医院は、地域の皆様の健康を守り、より良い生活をサポートすることを使命としています。創立以来、私たちは「患者様一人ひとりに寄り添った診療」を大切にし、地域密着型の医療を提供してまいりました。今後も、皆様の健康維持と病気予防に貢献するため、より良い医療サービスを提供し続けることをお約束いたします。</p>
+        </div>
+      </section>
+
+      <section class="about-detail v2-about-gallery" aria-labelledby="gallery-title">
+        <header class="about-detail__heading">
+          <h2 id="gallery-title">院内の様子</h2>
+        </header>
+        <div class="v2-about-gallery__grid">
+          <figure><img src="../assets/img/gallery-01.webp" alt="医師が患者様を診察している様子" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/img/gallery-02.webp" alt="スタッフが患者様に対応している様子" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/img/gallery-03.webp" alt="医師が診療記録を確認している様子" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/img/gallery-04.webp" alt="医院の中庭" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/img/gallery-05.webp" alt="院内の診療スペース" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/img/gallery-06.webp" alt="院内の病室" loading="lazy" decoding="async"></figure>
         </div>
       </section>
 
@@ -186,8 +200,17 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container"><small>©佐藤医院</small></div>
+  <footer class="site-footer v2-footer">
+    <div class="container v2-footer__grid">
+      <div class="v2-footer__main">
+        <div class="v2-footer__identity">
+          <p class="v2-footer__name">佐藤医院</p>
+          <address><p>〒123-4567　東京都台東区上野0-0-0</p><p><a href="tel:0000000000">電話番号：00-0000-0000</a></p></address>
+        </div>
+        <nav aria-label="フッターナビゲーション"><a href="../news/index.html">お知らせ</a><a href="../services/index.html">診療内容</a><a href="./index.html">当院について</a><a href="../access/index.html">診療時間・所在地</a><a href="../faq/index.html">よくあるご質問</a></nav>
+      </div>
+      <small>©佐藤医院</small>
+    </div>
   </footer>
 </body>
 </html>

@@ -497,3 +497,183 @@ body.news-page {
   }
 }
 /* === NEWS SUBPAGE MOBILE + HEADER v1 END === */
+
+/* === CLINIC V2 LOWER PAGES PHASE 5 NEWS START === */
+.news-page.v2-subpage { background:var(--light); }
+
+.news-page.v2-subpage .news-page-main {
+  min-height:calc(100vh - 230px);
+  padding-block:var(--space-12) var(--space-24);
+  background:var(--light);
+}
+
+.news-page.v2-subpage .news-breadcrumb,
+.news-page.v2-subpage .news-archive__heading,
+.news-page.v2-subpage .news-detail {
+  width:min(100%,880px);
+}
+
+.news-page.v2-subpage .news-breadcrumb { margin-inline:auto; }
+
+.news-page.v2-subpage .news-archive { margin-top:var(--space-12); }
+
+.news-page.v2-subpage .news-archive__heading {
+  margin-inline:auto;
+  padding-bottom:var(--space-8);
+  border-bottom:1px solid var(--border);
+}
+
+.news-page.v2-subpage .news-archive__title,
+.news-page.v2-subpage .news-detail__title {
+  color:var(--primary);
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:1.3;
+  letter-spacing:.02em;
+}
+
+.news-page.v2-subpage .news-archive__layout {
+  width:min(100%,1024px);
+  margin:var(--space-12) auto 0;
+  grid-template-columns:minmax(240px,320px) minmax(0,1fr);
+  gap:var(--space-12);
+  align-items:start;
+}
+
+.news-page.v2-subpage .news-archive__image {
+  width:100%;
+  height:auto;
+  aspect-ratio:3 / 4;
+  border-radius:var(--radius-medium);
+  object-fit:cover;
+}
+
+.news-page.v2-subpage .news-archive__list {
+  display:grid;
+  gap:var(--space-3);
+}
+
+.news-page.v2-subpage .news-archive__list li {
+  border:1px solid var(--border);
+  border-radius:var(--radius-medium);
+  background:var(--surface);
+}
+
+.news-page.v2-subpage .news-archive__list a {
+  min-height:72px;
+  display:grid;
+  grid-template-columns:max-content minmax(0,1fr) auto;
+  gap:var(--space-4);
+  align-items:center;
+  padding:var(--space-4);
+  color:var(--text);
+  font-size:1rem;
+  line-height:1.6;
+  font-weight:700;
+}
+
+.news-page.v2-subpage .news-archive__list a:hover {
+  background:var(--surface-muted);
+  text-decoration:none;
+}
+
+.news-archive__category {
+  min-width:7em;
+  padding:var(--space-1) var(--space-2);
+  border-radius:var(--radius-pill);
+  background:var(--surface-muted);
+  color:var(--primary-dark);
+  font-size:.75rem;
+  line-height:1.5;
+  font-weight:700;
+  text-align:center;
+  white-space:nowrap;
+}
+
+.news-page.v2-subpage .news-detail { margin:var(--space-12) auto 0; }
+
+.news-page.v2-subpage .news-detail__category {
+  display:inline-flex;
+  min-height:32px;
+  align-items:center;
+  margin-bottom:var(--space-3);
+  padding:var(--space-1) var(--space-3);
+  border-radius:var(--radius-pill);
+  background:var(--surface-muted);
+  color:var(--primary-dark);
+  font-size:var(--font-size-small);
+}
+
+.news-page.v2-subpage .news-detail__divider {
+  margin-block:var(--space-8) var(--space-12);
+  background:var(--border);
+}
+
+.news-page.v2-subpage .news-detail__body {
+  max-width:760px;
+  margin-inline:auto;
+  font-size:1.125rem;
+  line-height:2;
+}
+
+.news-page.v2-subpage .news-detail__actions {
+  width:min(100%,760px);
+  margin:var(--space-12) auto 0;
+}
+
+.news-page.v2-subpage .news-detail__back {
+  min-height:48px;
+  border:1px solid var(--primary);
+  border-radius:var(--radius-small);
+  background:var(--primary);
+}
+
+.news-page.v2-subpage .v2-footer.site-footer {
+  height:auto;
+  padding-block:var(--space-12) var(--space-6);
+  text-align:left;
+}
+
+.news-page.v2-subpage .v2-footer__identity address {
+  margin-top:var(--space-3);
+  color:rgba(255,255,255,.86);
+  font-size:var(--font-size-small);
+  line-height:1.7;
+}
+
+.news-page.v2-subpage .v2-footer__identity address p { margin:0; }
+
+@media (max-width:767px) {
+  .news-page.v2-subpage .news-page-main {
+    padding-block:var(--space-8) var(--space-16);
+  }
+
+  .news-page.v2-subpage .news-archive__layout {
+    grid-template-columns:1fr;
+    gap:var(--space-8);
+  }
+
+  .news-page.v2-subpage .news-archive__list a {
+    grid-template-columns:max-content minmax(0,1fr) auto;
+    gap:var(--space-3);
+    padding:var(--space-3);
+    font-size:1rem;
+  }
+
+  .news-page.v2-subpage .news-detail__body {
+    font-size:1rem;
+    line-height:1.9;
+  }
+}
+
+@media (max-width:480px) {
+  .news-page.v2-subpage .news-archive__list a {
+    grid-template-columns:1fr auto;
+  }
+
+  .news-page.v2-subpage .news-archive__list .news-archive__category {
+    grid-column:1 / -1;
+    justify-self:start;
+  }
+}
+
+/* === CLINIC V2 LOWER PAGES PHASE 5 NEWS END === */

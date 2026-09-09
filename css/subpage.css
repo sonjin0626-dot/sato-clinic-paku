@@ -693,3 +693,360 @@
     margin-top: 48px;
   }
 }
+
+/* === CLINIC V2 LOWER PAGES PHASE 5 START === */
+.v2-subpage {
+  background:var(--light);
+}
+
+.v2-subpage .subpage-header.site-header {
+  background:linear-gradient(90deg,#bcd9dd 0%,#3b529a 30.7%,#3752a0 30.8%,#315999 86%);
+}
+
+.v2-subpage .subpage-main {
+  padding-block:var(--space-12) var(--space-24);
+}
+
+.v2-subpage .breadcrumb {
+  max-width:880px;
+  margin-inline:auto;
+}
+
+.v2-subpage .page-heading {
+  margin-top:var(--space-12);
+  padding-bottom:var(--space-8);
+}
+
+.v2-subpage .page-heading h1 {
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:1.3;
+  letter-spacing:.02em;
+}
+
+.v2-subpage .page-heading > p:last-child {
+  color:var(--text-muted);
+}
+
+.services-page .v2-service-index {
+  width:min(100%,880px);
+  margin:var(--space-8) auto 0;
+  padding:var(--space-4);
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--space-2);
+  border:1px solid var(--border);
+  border-radius:var(--radius-medium);
+  background:var(--surface);
+}
+
+.services-page .v2-service-index a {
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:var(--space-2) var(--space-4);
+  border:1px solid var(--border);
+  border-radius:var(--radius-pill);
+  background:var(--surface-muted);
+  color:var(--primary-dark);
+  font-size:var(--font-size-small);
+  font-weight:700;
+}
+
+.services-page .v2-service-index a:hover {
+  border-color:var(--primary);
+  background:var(--paper);
+  text-decoration:none;
+}
+
+.services-page .service-detail-list {
+  display:grid;
+  gap:var(--space-6);
+}
+
+.services-page .service-detail--with-image {
+  width:min(100%,880px);
+  margin-inline:auto;
+  padding:var(--space-8);
+  border:1px solid var(--border);
+  border-radius:var(--radius-large);
+  background:var(--surface);
+}
+
+.services-page .service-detail__heading h2 {
+  margin:0;
+  font-size:clamp(1.5rem,2.5vw,2rem);
+  line-height:1.45;
+}
+
+.services-page .service-detail__content {
+  grid-template-columns:240px minmax(0,1fr);
+  gap:var(--space-8);
+  margin-top:var(--space-6);
+}
+
+.services-page .service-detail--reverse .service-detail__content {
+  grid-template-columns:minmax(0,1fr) 240px;
+}
+
+.services-page .service-detail__content img,
+.services-page .service-detail--reverse .service-detail__content img {
+  width:240px;
+  height:240px;
+  object-fit:contain;
+}
+
+.services-page .service-detail__content p {
+  max-width:34em;
+}
+
+.v2-about-gallery {
+  margin-top:var(--space-6);
+}
+
+.v2-about-gallery__grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:var(--space-4);
+}
+
+.v2-about-gallery__grid figure {
+  min-width:0;
+  overflow:hidden;
+  border:1px solid var(--border);
+  border-radius:var(--radius-medium);
+  background:var(--surface);
+}
+
+.v2-about-gallery__grid img {
+  width:100%;
+  aspect-ratio:4 / 3;
+  object-fit:cover;
+}
+
+.about-page .staff-profiles__list {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:var(--space-6);
+}
+
+.about-page .staff-profile {
+  padding:var(--space-6);
+  border:1px solid var(--border);
+  border-radius:var(--radius-large);
+  background:var(--surface);
+}
+
+.about-page .staff-profile:last-child {
+  padding-bottom:var(--space-6);
+  border-bottom:1px solid var(--border);
+}
+
+.about-page .staff-profile__heading h3 {
+  margin-bottom:var(--space-4);
+  font-size:1.25rem;
+  line-height:1.5;
+}
+
+.about-page .staff-profile__content,
+.about-page .staff-profile:nth-child(even) .staff-profile__content {
+  display:grid;
+  grid-template-columns:120px minmax(0,1fr);
+  gap:var(--space-4);
+  align-items:start;
+}
+
+.about-page .staff-profile:nth-child(even) .staff-profile__content img,
+.about-page .staff-profile:nth-child(even) .staff-profile__details {
+  grid-column:auto;
+  grid-row:auto;
+}
+
+.about-page .staff-profile__content img {
+  width:120px;
+  height:120px;
+  object-fit:cover;
+}
+
+.about-page .staff-profile__details {
+  gap:var(--space-3);
+  font-size:.9375rem;
+  line-height:1.75;
+}
+
+.about-page .philosophy-list {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:var(--space-4);
+  border-top:0;
+}
+
+.about-page .philosophy-list li {
+  padding:var(--space-6);
+  border:1px solid var(--border);
+  border-radius:var(--radius-medium);
+  background:var(--surface);
+}
+
+.access-page .access-page-hours,
+.access-page .access-page-departments,
+.access-page .access-page-location,
+.access-page .access-page-contact {
+  padding-block:var(--space-12);
+}
+
+.access-page .access-page-location__info,
+.access-page .access-page-contact address {
+  color:var(--text);
+}
+
+.faq-page .faq-category {
+  padding-top:var(--space-12);
+}
+
+.faq-page .faq-list {
+  display:grid;
+  gap:var(--space-4);
+  border-top:0;
+}
+
+.faq-page .faq-list > div {
+  padding:var(--space-6);
+  border:1px solid var(--border);
+  border-radius:var(--radius-medium);
+  background:var(--surface);
+}
+
+.faq-page .faq-list dt,
+.faq-page .faq-list dd {
+  position:relative;
+  padding-left:42px;
+}
+
+.faq-page .faq-list dt::before,
+.faq-page .faq-list dd::before {
+  position:absolute;
+  top:.1em;
+  left:0;
+  width:28px;
+  height:28px;
+  display:inline-grid;
+  place-items:center;
+  border-radius:var(--radius-small);
+  font-size:.875rem;
+  line-height:1;
+  font-weight:900;
+}
+
+.faq-page .faq-list dt::before {
+  content:"Q";
+  background:var(--primary);
+  color:#fff;
+}
+
+.faq-page .faq-list dd::before {
+  content:"A";
+  background:var(--surface-muted);
+  color:var(--primary-dark);
+}
+
+.faq-page .faq-list dd {
+  margin-top:var(--space-4);
+}
+
+.v2-subpage .v2-footer.site-footer {
+  height:auto;
+  padding-block:var(--space-12) var(--space-6);
+  text-align:left;
+}
+
+.v2-subpage .v2-footer__identity address {
+  margin-top:var(--space-3);
+  color:rgba(255,255,255,.86);
+  font-size:var(--font-size-small);
+  line-height:1.7;
+}
+
+.v2-subpage .v2-footer__identity address p {
+  margin:0;
+}
+
+.v2-subpage .v2-footer a:hover {
+  text-decoration:underline;
+}
+
+@media (max-width:767px) {
+  .v2-subpage .subpage-main {
+    padding-block:var(--space-8) var(--space-16);
+  }
+
+  .services-page .v2-service-index {
+    margin-top:var(--space-6);
+  }
+
+  .services-page .service-detail--with-image,
+  .services-page .service-detail-list .service-detail--with-image {
+    padding:var(--space-6);
+  }
+
+  .services-page .service-detail__content,
+  .services-page .service-detail--reverse .service-detail__content {
+    display:flex;
+    flex-direction:column;
+    gap:var(--space-6);
+    align-items:stretch;
+  }
+
+  .services-page .service-detail__content img,
+  .services-page .service-detail--reverse .service-detail__content img {
+    width:min(100%,220px);
+    height:auto;
+    aspect-ratio:1;
+    margin-inline:auto;
+  }
+
+  .v2-about-gallery__grid,
+  .about-page .philosophy-list {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .about-page .staff-profiles__list {
+    grid-template-columns:1fr;
+  }
+
+  .about-page .staff-profile__content,
+  .about-page .staff-profile:nth-child(even) .staff-profile__content {
+    display:flex;
+    flex-direction:column;
+    gap:var(--space-4);
+  }
+
+  .about-page .staff-profile__content img {
+    width:min(100%,200px);
+    height:auto;
+    aspect-ratio:1;
+    margin-inline:auto;
+  }
+
+  .faq-page .faq-category {
+    padding-top:var(--space-8);
+  }
+
+  .faq-page .faq-list > div {
+    padding:var(--space-4);
+  }
+}
+
+@media (max-width:480px) {
+  .v2-about-gallery__grid {
+    grid-template-columns:1fr;
+  }
+
+  .services-page .v2-service-index {
+    gap:var(--space-2);
+  }
+
+  .services-page .v2-service-index a {
+    flex:1 1 calc(50% - var(--space-2));
+  }
+}
+
+/* === CLINIC V2 LOWER PAGES PHASE 5 END === */
