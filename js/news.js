@@ -8,6 +8,19 @@ const siteHeader = document.querySelector(".subpage-header");
 const navToggle = document.querySelector(".nav-toggle");
 const globalNav = document.querySelector("#global-nav");
 
+function revealHashFaq() {
+  if (!window.location.hash) return;
+
+  const target = document.getElementById(window.location.hash.slice(1));
+  if (!(target instanceof HTMLDetailsElement) || !target.closest(".faq-page .faq-list")) return;
+
+  target.open = true;
+  target.scrollIntoView({ block: "start", behavior: "auto" });
+}
+
+revealHashFaq();
+window.addEventListener("hashchange", revealHashFaq);
+
 if (siteHeader && navToggle && globalNav) {
   function closeMenu({ returnFocus = false } = {}) {
     siteHeader.classList.remove("is-menu-open");
