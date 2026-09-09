@@ -202,6 +202,10 @@
   line-height: 32px;
 }
 
+.about-detail#greeting > p + p {
+  margin-top: 24px;
+}
+
 .about-detail--overview .about-detail__content {
   display: grid;
   grid-template-columns: 360px minmax(0, 1fr);
