@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="佐藤医院からのお知らせ一覧です。">
-  <title>お知らせ | 佐藤医院</title>
+  <meta name="description" content="{{description}}">
+  <title>{{title}} | 佐藤医院</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -21,22 +21,19 @@
   </header>
   <main id="main" class="news-page-main">
     <div class="container">
-      <nav class="news-breadcrumb" aria-label="パンくず"><ol><li><a href="../index.html#top">トップ</a></li><li aria-current="page">お知らせ</li></ol></nav>
-      <section class="news-archive" aria-labelledby="news-archive-title">
-        <div class="news-archive__heading"><p class="news-archive__eyebrow">NEWS</p><h1 class="news-archive__title" id="news-archive-title">お知らせ</h1></div>
-        <div class="news-archive__layout">
-          <img class="news-archive__image" src="../assets/img/news.webp" alt="院内で患者様を案内するスタッフ" width="360" height="480" loading="lazy" decoding="async">
-          <!-- CMS:NEWS:START -->
-          <ul class="news-archive__list">
-            <li><a href="./influenza.html"><span class="news-archive__category">予防接種</span><span>インフルエンザ予防接種について</span><span aria-hidden="true">→</span></a></li>
-            <li><a href="./year-end.html"><span class="news-archive__category">休診・診療時間</span><span>年末年始の休診について</span><span aria-hidden="true">→</span></a></li>
-            <li><a href="./checkup.html"><span class="news-archive__category">健康診断</span><span>健康診断のご案内</span><span aria-hidden="true">→</span></a></li>
-            <li><a href="./covid19.html"><span class="news-archive__category">診療案内</span><span>新型コロナウイルス対策について</span><span aria-hidden="true">→</span></a></li>
-            <li><a href="./online.html"><span class="news-archive__category">診療案内</span><span>オンライン診療の導入について</span><span aria-hidden="true">→</span></a></li>
-          </ul>
-          <!-- CMS:NEWS:END -->
+      <nav class="news-breadcrumb" aria-label="パンくず"><ol><li><a href="../index.html#top">トップ</a></li><li><a href="./index.html">お知らせ</a></li><li aria-current="page">{{title}}</li></ol></nav>
+      <article class="news-detail">
+        <header class="news-detail__header">
+          <p class="news-detail__category">{{category}}</p>
+          <h1 class="news-detail__title">{{title}}</h1>
+          {{publishedAt}}
+          <hr class="news-detail__divider">
+        </header>
+        <div class="news-detail__body">
+{{body}}
         </div>
-      </section>
+      </article>
+      <div class="news-detail__actions"><a class="news-detail__back" href="./index.html">お知らせ一覧へ戻る</a></div>
     </div>
   </main>
   <footer class="site-footer v2-footer"><div class="container v2-footer__grid"><div class="v2-footer__main"><div class="v2-footer__identity"><p class="v2-footer__name">佐藤医院</p><address><p>〒123-4567　東京都台東区上野0-0-0</p><p><a href="tel:0000000000">電話番号：00-0000-0000</a></p></address></div><nav aria-label="フッターナビゲーション"><a href="./index.html">お知らせ</a><a href="../services/index.html">診療内容</a><a href="../about/index.html">当院について</a><a href="../access/index.html">診療時間・所在地</a><a href="../faq/index.html">よくあるご質問</a></nav></div><small>©佐藤医院</small></div></footer>

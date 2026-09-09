@@ -1,0 +1,57 @@
+media: false
+
+content:
+  - name: news
+    label: お知らせ
+    path: content/news
+    type: collection
+    filename: "{fields.slug}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, category, publishedAt]
+    operations:
+      create: true
+      rename: false
+      delete: false
+    fields:
+      - name: title
+        label: タイトル
+        type: string
+        required: true
+      - name: slug
+        label: URLスラッグ
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9-]+$"
+          message: 半角小文字・数字・ハイフンのみを使用してください。
+      - name: category
+        label: カテゴリー
+        type: select
+        required: true
+        options:
+          values:
+            - label: 予防接種
+              value: 予防接種
+            - label: 休診・診療時間
+              value: 休診・診療時間
+            - label: 健康診断
+              value: 健康診断
+            - label: 診療案内
+              value: 診療案内
+      - name: publishedAt
+        label: 公開日
+        type: date
+        required: false
+      - name: sortOrder
+        label: 並び順
+        type: number
+        required: false
+        hidden: true
+      - name: body
+        label: 本文
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          media: false
