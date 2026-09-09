@@ -676,7 +676,7 @@ td { color:var(--primary); }
 .v2-section { padding-block:var(--space-24); }
 .v2-section--muted { background:var(--surface-muted); }
 .v2-section__heading { display:grid; gap:var(--space-2); margin-bottom:var(--space-12); }
-.v2-section__eyebrow { color:var(--secondary); font-size:var(--font-size-small); font-weight:700; letter-spacing:.12em; line-height:1.4; }
+.v2-section__eyebrow { color:var(--primary); font-size:var(--font-size-small); font-weight:700; letter-spacing:.12em; line-height:1.4; }
 .v2-section__title { margin:0; }
 .v2-section__rule { width:48px; height:2px; margin:0; border:0; background:var(--primary); }
 
